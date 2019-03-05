@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "client": "webpack-dev-server --devtool inline-source-map --hot --config webpack.client.config.js",
+    "server": "nodemon --exec babel-node --watch src/server src/server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,11 +20,14 @@
   },
   "homepage": "https://github.com/ludralph/graphbook#readme",
   "dependencies": {
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10",
     "react": "^16.8.3",
     "react-dom": "^16.8.3"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
     "@babel/plugin-proposal-class-properties": "^7.3.4",
     "@babel/plugin-proposal-decorators": "^7.3.0",
     "@babel/plugin-proposal-export-namespace-from": "^7.2.0",
